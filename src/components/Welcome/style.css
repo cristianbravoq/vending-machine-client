@@ -1,0 +1,94 @@
+.welcome {
+    background: radial-gradient(ellipse at center, #C8553D, transparent);
+}
+
+.title {
+  backdrop-filter: blur(10px);
+}
+
+.circles > span {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+
+.title > p {
+  text-shadow: 0px 0px 5px rgb(206, 196, 196);
+}
+
+@media (min-width: 640px) {
+  .circles > span {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+}
+
+.circles > * {
+  border-radius: 50%;
+  border: 20px;
+}
+
+@keyframes rotacion1 {
+  0% {
+    transform: translate(-50px, -50px);
+  }
+  50% {
+    transform: translate(40px, 30px);
+  }
+  100% {
+    transform: translate(-50px, -50px);
+  }
+}
+@keyframes rotacion2 {
+  0% {
+    transform: translate(-50px, 30px);
+  }
+  50% {
+    transform: translate(50px, -40px);
+  }
+  100% {
+    transform: translate(-50px, 30px);
+  }
+}
+@keyframes rotacion3 {
+  0% {
+    transform: translate(50px, -35px);
+  }
+  50% {
+    transform: translate(-50px, 30px);
+  }
+  100% {
+    transform: translate(50px, -35px);
+  }
+}
+
+.circle1 {
+  background: radial-gradient(ellipse at center, yellow, transparent); /* Difuminado hacia afuera */ 
+  position: absolute;
+  top: 35%;
+  transform: translate(100px, -50%);
+  animation: rotacion1 5s infinite;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Difuminado en el borde */
+}
+
+.circle2 {
+  background: radial-gradient(ellipse at center, blueviolet, transparent);
+  position: absolute;
+  top: 35%;
+  animation: rotacion2 5s infinite;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Difuminado en el borde */
+}
+
+.circle3 {
+  background: radial-gradient(ellipse at center, green, transparent);
+  position: absolute;
+  top: 35%;
+  animation: rotacion3 5s infinite;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Difuminado en el borde */
+}
