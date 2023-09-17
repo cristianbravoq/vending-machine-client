@@ -2,24 +2,24 @@ import { IDataProduct, IDataStateSale } from "@models/index";
 import { createContext, useContext, useState } from "react";
 
 export interface IStateSale<T> {
-  id: number;
   stateSale: T;
 }
 
 interface SaleContextState {
   stateSale: IStateSale<IDataStateSale>;
-  dataProducts: IDataProduct[];
+  dataProducts: IDataProduct[]; 
   updateStateSale: (nuevoGrupoDatos: IStateSale<IDataStateSale>) => void;
   resetStateSale: () => void;
   updateDataProducts: (dataProducts : IDataProduct[]) => void;
 }
 
-const initialState = {
-  id: 0, stateSale: {
+export const initialState = {
+    stateSale: {
     TotalAmount: 0,
     CoinsInserted: 0,
     RemainingCoins: 0,
-    ProductId: 0
+    ProductId: 0,
+    PriceProduct: 0
   }
 }
 

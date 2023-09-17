@@ -17,3 +17,12 @@ export const getItemById = async (itemId: number) => {
     throw error;
   }
 };
+
+export const saleProducts = async (itemId: number) => {
+  try {
+    const response = await axiosInstance.get(`/items/sale/${itemId}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}

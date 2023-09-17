@@ -3,4 +3,5 @@ export interface IDataStateSale {
     CoinsInserted: number;
     RemainingCoins: number;
     ProductId: number;
+    PriceProduct: number;
 }

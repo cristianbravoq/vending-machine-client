@@ -1,8 +1,10 @@
+import { useSaleContext } from "@contexts/index";
 import { Coin } from "@models/coin.model";
 import { getAllCoins } from "@services/index";
 import { useEffect, useState } from "react";
 
 const CoinsInfo: React.FC = () => {
+  const { stateSale } = useSaleContext();
   const [coins, setCoins] = useState<Coin[]>([]);
 
   useEffect(() => {
@@ -13,7 +15,7 @@ const CoinsInfo: React.FC = () => {
       .catch((error) => {
         console.error('Error al obtener los items:', error);
       });
-  }, []);
+  }, [stateSale]);
 
   return (
     <div className="flex flex-wrap gap-1">
